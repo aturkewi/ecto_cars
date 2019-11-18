@@ -6,9 +6,9 @@ defmodule EctoCars.Application do
   use Application
 
   def start(_type, _args) do
-    EctoCars.Repo
     # List all child processes to be supervised
     children = [
+      EctoCars.Repo
       # Starts a worker by calling: EctoCars.Worker.start_link(arg)
       # {EctoCars.Worker, arg},
     ]
