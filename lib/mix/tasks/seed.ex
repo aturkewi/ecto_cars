@@ -22,20 +22,22 @@ defmodule Mix.Tasks.Seed do
   ]
 
   @specifications_info [
+    # 1. Big engine and automatic
     %{engine_id: 1, transmission_id: 1},
+    # 2. Big engine and manula
     %{engine_id: 1, transmission_id: 2},
+    # 3. Small engine and automatic
     %{engine_id: 2, transmission_id: 1},
+    # 4. Small engine and manual
     %{engine_id: 2, transmission_id: 2}
   ]
 
   @cars_info [
-    # blue automatic v8
-    %{color: "blue", vin_number: "car1", specification_id: 1},
-    %{color: "black", vin_number: "car2", specification_id: 2},
-    %{color: "red", vin_number: "car3", specification_id: 2},
-    %{color: "purple", vin_number: "car4", specification_id: 3},
-    %{color: "blue", vin_number: "car5", specification_id: 4},
-    %{color: "green", vin_number: "car6", specification_id: 4}
+    %{color: "blue", vin_number: "too_small", specification_id: 3},
+    %{color: "red", vin_number: "wrong_color", specification_id: 1},
+    %{color: "blue", vin_number: "my_dream_car", specification_id: 1},
+    %{color: "blue", vin_number: "cant_drive_this", specification_id: 2},
+    %{color: "green", vin_number: "nothing_i_want_here", specification_id: 4}
   ]
 
   @impl Mix.Task
